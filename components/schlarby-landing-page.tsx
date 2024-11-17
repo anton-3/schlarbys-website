@@ -53,25 +53,33 @@ export default function SchlarbyLandingPage() {
         </section>
 
         <section id="menu" className="py-16 bg-white">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">Featured Items</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {['The Beef-ish', 'Curly-ish Fries', 'Jamocha Shake-ish'].map((item, index) => (
-                <Card key={index}>
-                  <CardHeader>
-                    <CardTitle>{item}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <img src={`/placeholder.svg?height=200&width=300`} alt={item} className="w-full h-48 object-cover rounded-md" />
-                  </CardContent>
-                  <CardFooter>
-                    <Button variant="outline" className="w-full">Add to Order</Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
+  <div className="container mx-auto">
+    <h2 className="text-3xl font-bold mb-8 text-center">Featured Items</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        { name: "Mike Tyson's Juicy Ass $20mil", image: "/images/miketyson.jpg" },
+        { name: "Jork chops and Peanits", image: "/images/jork.jpg" },
+        { name: "Schloppy Jared $19.99", image: "/images/jared.png" }
+      ].map((item, index) => (
+        <Card key={index}>
+          <CardHeader>
+            <CardTitle>{item.name}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-48 object-cover rounded-md"
+            />
+          </CardContent>
+          <CardFooter>
+            <Button variant="outline" className="w-full">Add to Order</Button>
+          </CardFooter>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section id="locations" className="py-16 bg-red-100">
           <div className="container mx-auto">
