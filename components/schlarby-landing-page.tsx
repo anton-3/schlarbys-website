@@ -47,7 +47,7 @@ export default function SchlarbyLandingPage() {
         <section className="bg-red-600 text-white py-20 text-center">
           <div className="container mx-auto">
             <h2 className="text-5xl font-bold mb-4">We Have The Schmeats</h2>
-            <p className="text-xl mb-8">Indulge in our almost-famous roast beef and curly fries!</p>
+            <p className="text-xl mb-8">Put our meat in your mouth!</p>
             <Button size="lg" className="bg-white text-red-600 hover:bg-red-100">Order Now <ArrowRight className="ml-2" /></Button>
           </div>
         </section>
@@ -85,7 +85,7 @@ export default function SchlarbyLandingPage() {
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Find a Schlarby`s Near You</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {['New Pork', 'Los Mangeles', 'Chicarbo'].map((city, index) => (
+              {['cumtown', 'meatmouth', 'Austin TX'].map((city, index) => (
                 <Card key={index}>
                   <CardHeader>
                     <CardTitle>{city}</CardTitle>
@@ -93,7 +93,7 @@ export default function SchlarbyLandingPage() {
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center mb-2">
-                      <MapPin className="mr-2" /> 123 Meaty Street
+                      <MapPin className="mr-2" /> 900 Red River St.
                     </div>
                     <div className="flex items-center mb-2">
                       <Clock className="mr-2" /> Open 10AM - 10PM
@@ -116,6 +116,7 @@ export default function SchlarbyLandingPage() {
         <div className="container mx-auto text-center">
           <p>&copy; 2024 Schlarby`s. All rights reserved.</p>
           <p className="mt-2">We have the schmeats!</p>
+          <img src="\images\ant.jpg" alt="antmeat" width="30" height="30"></img>
         </div>
       </footer>
     </div>
